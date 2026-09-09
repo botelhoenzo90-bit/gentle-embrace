@@ -1,3 +1,5 @@
 /* Global stylesheet entry point. Keep the existing visual system in index.css and apply final layout fixes after it. */
 @import "../index.css";
 @import "./site-fixes.css";
+
+/* Lovable/GitHub sync test: this harmless comment confirms a fresh commit on main. */
