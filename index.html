@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Amaral Engenharia — Engenharia Civil, reformas em geral, revisão e manutenção de telhados em Lago Norte, Lago Sul, Jardim Botânico e Plano Piloto, Brasília DF." />
+  <meta name="theme-color" content="#0b63ce" />
+  <title>Amaral Engenharia | Reformas, Telhados e Laudos em Brasília</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#0b63ce;
+      --blue-2:#0a4da3;
+      --blue-3:#eaf4ff;
+      --navy:#071b34;
+      --ink:#142033;
+      --muted:#617086;
+      --red:#c51f2c;
+      --red-dark:#9e1722;
+      --white:#fff;
+      --line:#e5ebf3;
+      --shadow:0 22px 60px rgba(7,27,52,.12);
+      --radius:24px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff;line-height:1.55;overflow-x:hidden}
+    h1,h2,h3,h4{font-family:Manrope,sans-serif;line-height:1.1}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topbar{background:var(--navy);color:#dfeaff;font-size:13px;padding:9px 0}
+    .topbar .inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .topbar span{display:flex;align-items:center;gap:7px}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(229,235,243,.9)}
+    .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--blue-2)}
+    .brand-mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(145deg,var(--blue),#2388ed);display:grid;place-items:center;color:#fff;font-family:Manrope;font-size:20px;box-shadow:0 8px 20px rgba(11,99,206,.25)}
+    .brand small{display:block;color:#718096;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
+    .menu{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:700;color:#42526a}
+    .menu a:hover{color:var(--blue)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:13px 18px;font-weight:800;font-size:14px;transition:.2s ease;cursor:pointer;border:0}
+    .nav-cta,.btn-primary{background:var(--red);color:#fff;box-shadow:0 12px 24px rgba(197,31,44,.2)}
+    .nav-cta:hover,.btn-primary:hover{background:var(--red-dark);transform:translateY(-2px)}
+    .hero{position:relative;min-height:690px;display:flex;align-items:center;overflow:hidden;background:linear-gradient(115deg,#061b34 0%,#0a3566 52%,#0b63ce 100%);color:#fff}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 25%,rgba(80,190,255,.3),transparent 33%),linear-gradient(90deg,rgba(4,17,33,.88),rgba(5,31,61,.55) 52%,rgba(5,38,74,.1));z-index:1}
+    .hero-photo{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=88') center/cover;opacity:.48;filter:saturate(.9)}
+    .hero-content{position:relative;z-index:2;padding:80px 0 92px;max-width:760px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.09);border-radius:999px;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:800;margin-bottom:22px}
+    .eyebrow i{width:7px;height:7px;background:#ffcc3d;border-radius:50%;display:block}
+    .hero h1{font-size:clamp(40px,5.5vw,70px);letter-spacing:-.045em;max-width:790px}
+    .hero h1 span{color:#63c5ff}
+    .hero p{font-size:19px;color:#d9e8f8;max-width:680px;margin:22px 0 30px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn-light{background:#fff;color:var(--navy);box-shadow:0 12px 28px rgba(0,0,0,.16)}
+    .btn-light:hover{transform:translateY(-2px);background:#f2f8ff}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px;color:#e7f2ff;font-size:13px;font-weight:700}
+    .hero-trust span{display:flex;align-items:center;gap:8px}
+    .check{width:21px;height:21px;border-radius:50%;background:#1aa66f;display:grid;place-items:center;font-size:12px}
+    .quick{position:relative;z-index:3;margin-top:-52px}
+    .quick-grid{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:22px;padding:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+    .quick-card{padding:12px 20px;border-right:1px solid var(--line)}
+    .quick-card:last-child{border-right:0}
+    .quick-card strong{display:block;font-family:Manrope;font-size:15px;margin-bottom:4px}
+    .quick-card span{color:var(--muted);font-size:13px}
+    .icon{width:44px;height:44px;border-radius:13px;background:var(--blue-3);color:var(--blue);display:grid;place-items:center;font-size:21px;margin-bottom:12px}
+    section{padding:96px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
+    .section-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:var(--blue);font-weight:800;margin-bottom:12px}
+    .section-head h2{font-size:clamp(31px,4vw,48px);letter-spacing:-.035em;max-width:720px}
+    .section-head p{max-width:470px;color:var(--muted);font-size:16px}
+    .services{background:#f6f9fd}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;min-height:270px;overflow:hidden;transition:.25s ease}
+    .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#cbdff5}
+    .service-card:after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;right:-40px;bottom:-45px;background:var(--blue-3)}
+    .service-card h3{font-size:20px;margin-bottom:10px;max-width:230px}
+    .service-card p{font-size:14px;color:var(--muted);max-width:300px}
+    .service-link{position:absolute;left:28px;bottom:24px;color:var(--blue);font-size:13px;font-weight:800;z-index:2}
+    .service-slider{overflow:hidden}
+    .slider-track{display:flex;gap:18px;transition:transform .55s ease}
+    .slider-track .service-card{min-width:calc((100% - 36px)/3)}
+    .slider-controls{display:flex;gap:9px}
+    .circle-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;font-size:18px}
+    .circle-btn:hover{border-color:var(--blue);color:var(--blue)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .image-card{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);position:relative;min-height:500px;background:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85') center/cover}
+    .image-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(6,27,52,.82))}
+    .image-badge{position:absolute;z-index:2;left:25px;bottom:24px;background:#fff;border-radius:17px;padding:16px 18px;max-width:270px;box-shadow:0 14px 30px rgba(0,0,0,.18)}
+    .image-badge strong{font-family:Manrope;display:block;font-size:17px;margin-bottom:3px}.image-badge span{font-size:12px;color:var(--muted)}
+    .bullet-list{list-style:none;display:grid;gap:16px;margin:27px 0 30px}
+    .bullet-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px}.bullet-list .check{flex:0 0 22px;margin-top:1px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.stat{padding:17px;border:1px solid var(--line);border-radius:16px;background:#fbfdff}.stat strong{font:800 24px Manrope;display:block;color:var(--blue)}.stat span{font-size:11px;color:var(--muted)}
+    .roof{background:var(--navy);color:#fff}.roof .section-kicker{color:#65c7ff}.roof .section-head p{color:#a8bfd8}
+    .roof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.roof-card{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);border-radius:20px;padding:26px}.roof-card h3{font-size:19px;margin:15px 0 9px}.roof-card p{font-size:13px;color:#adc2d9}.roof-card .icon{background:rgba(56,170,255,.14);color:#64c9ff}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{border-top:3px solid var(--blue);padding:20px 8px}.step-number{font:800 12px Manrope;color:var(--blue);letter-spacing:.12em}.step h3{font-size:18px;margin:10px 0 7px}.step p{font-size:13px;color:var(--muted)}
+    .areas{background:#f6f9fd}.area-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.area{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px;text-align:center;box-shadow:0 8px 25px rgba(7,27,52,.04)}.area .icon{margin:0 auto 13px}.area strong{font:800 15px Manrope;display:block}.area span{font-size:12px;color:var(--muted)}
+    .banner{padding:0 0 96px}.banner-inner{border-radius:28px;overflow:hidden;position:relative;padding:55px 60px;background:linear-gradient(110deg,var(--red-dark),var(--red));color:#fff;box-shadow:0 22px 55px rgba(158,23,34,.2)}.banner-inner:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-150px;top:-190px;background:rgba(255,255,255,.08)}.banner-inner h2{font-size:clamp(30px,4vw,46px);max-width:700px}.banner-inner p{margin:13px 0 22px;color:#ffe9eb;max-width:640px}.banner-inner .btn{background:#fff;color:var(--red-dark);position:relative;z-index:2}
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{border:1px solid var(--line);border-radius:20px;padding:27px;background:#fff}.stars{color:#f4b400;letter-spacing:2px;margin-bottom:16px}.review p{font-size:15px;color:#4f6076;margin-bottom:20px}.review strong{font-family:Manrope;font-size:14px}.review small{display:block;color:#8a97a8;font-size:11px;margin-top:2px}.review-note{margin-top:18px;color:var(--muted);font-size:12px}
+    .faq{background:#f6f9fd}.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.faq-item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:19px 21px}.faq-item summary{cursor:pointer;font:800 15px Manrope;list-style:none}.faq-item summary::-webkit-details-marker{display:none}.faq-item p{color:var(--muted);font-size:13px;padding-top:12px}
+    .contact{background:linear-gradient(135deg,#edf6ff,#fff)}.contact-grid{display:grid;grid-template-columns:1fr .85fr;gap:35px}.contact-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:var(--shadow)}.contact-card h3{font-size:24px;margin-bottom:9px}.contact-card p{color:var(--muted);font-size:14px;margin-bottom:22px}.contact-items{display:grid;gap:12px}.contact-item{display:flex;align-items:center;gap:13px;padding:14px;border:1px solid var(--line);border-radius:15px}.contact-item .icon{margin:0;flex:0 0 42px}.contact-item strong{display:block;font-size:14px}.contact-item span{font-size:12px;color:var(--muted)}
+    footer{background:#06172c;color:#a9bed6;padding:48px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:45px}.footer-brand{color:#fff;font:800 19px Manrope;margin-bottom:12px}.footer p,.footer li{font-size:13px}.footer h4{color:#fff;font-size:13px;margin-bottom:14px}.footer ul{list-style:none;display:grid;gap:8px}.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:35px;padding-top:20px;font-size:11px;display:flex;justify-content:space-between;gap:20px}
+    .whatsapp{position:fixed;right:22px;bottom:22px;z-index:100;width:62px;height:62px;border-radius:50%;background:#16b967;color:#fff;display:grid;place-items:center;box-shadow:0 15px 35px rgba(22,185,103,.35);font-size:29px;border:4px solid #fff;animation:pulse 2.4s infinite}.whatsapp:before{content:"";position:absolute;right:72px;white-space:nowrap;background:#fff;color:#19324f;border:1px solid var(--line);box-shadow:0 10px 25px rgba(7,27,52,.12);padding:9px 12px;border-radius:10px;font-size:11px;font-weight:800;opacity:0;transform:translateX(5px);transition:.2s}.whatsapp:hover:before{content:"Fale com a Amaral Engenharia";opacity:1;transform:none}@keyframes pulse{0%,100%{box-shadow:0 15px 35px rgba(22,185,103,.35),0 0 0 0 rgba(22,185,103,.35)}50%{box-shadow:0 15px 35px rgba(22,185,103,.35),0 0 0 10px rgba(22,185,103,0)}}
+    @media(max-width:900px){.menu{display:none}.quick-grid{grid-template-columns:1fr 1fr}.quick-card:nth-child(2){border-right:0}.quick-card:nth-child(-n+2){border-bottom:1px solid var(--line)}.service-grid,.roof-grid,.testimonials{grid-template-columns:1fr 1fr}.slider-track .service-card{min-width:calc((100% - 18px)/2)}.split,.contact-grid{grid-template-columns:1fr;gap:40px}.process{grid-template-columns:1fr 1fr}.area-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.image-card{min-height:420px}}
+    @media(max-width:620px){.container{width:min(100% - 28px,1160px)}.topbar .inner{justify-content:center}.topbar .inner span:last-child{display:none}.nav-inner{height:70px}.brand-mark{width:40px;height:40px}.nav-cta{padding:10px 12px;font-size:12px}.hero{min-height:650px}.hero-content{padding:70px 0 90px}.hero h1{font-size:42px}.hero p{font-size:16px}.hero-actions .btn{width:100%}.quick{margin-top:-35px}.quick-grid{grid-template-columns:1fr;padding:12px}.quick-card{border-right:0!important;border-bottom:1px solid var(--line)!important;padding:15px}.quick-card:last-child{border-bottom:0!important}.section-head{display:block}.section-head p{margin-top:15px}.service-grid,.roof-grid,.testimonials,.faq-grid,.footer-grid{grid-template-columns:1fr}.slider-track .service-card{min-width:100%}.process{grid-template-columns:1fr}.area-grid{grid-template-columns:1fr 1fr}.banner-inner{padding:35px 26px}.image-card{min-height:350px}.copyright{display:block}.copyright span{display:block;margin-top:8px}.whatsapp{right:16px;bottom:16px;width:58px;height:58px}.whatsapp:before{display:none}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container inner"><span>📍 Brasília • DF</span><span>Atendimento especializado em regiões selecionadas</span></div></div>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand"><span class="brand-mark">AE</span><span>Amaral Engenharia<small>Engenharia Civil • Perícias</small></span></a>
+      <nav class="menu"><a href="#servicos">Serviços</a><a href="#telhados">Telhados</a><a href="#empresa">A empresa</a><a href="#regioes">Regiões</a><a href="#duvidas">Dúvidas</a></nav>
+      <a class="nav-cta" href="https://wa.me/556183277032?text=Ol%C3%A1%2C%20Valluce!%20Encontrei%20a%20Amaral%20Engenharia%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp →</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-photo"></div>
+      <div class="container"><div class="hero-content">
+        <div class="eyebrow"><i></i> Engenharia Civil em Brasília</div>
+        <h1>Reformas bem executadas começam com <span>uma avaliação profissional.</span></h1>
+        <p>Reformas em geral, revisão e manutenção de telhados, laudos, perícias, avaliações e serviços de engenharia com atendimento focado em Lago Norte, Lago Sul, Jardim Botânico e Plano Piloto.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/556183277032?text=Ol%C3%A1%2C%20Valluce!%20Quero%20avaliar%20uma%20obra%20ou%20reforma." target="_blank" rel="noopener">Solicitar avaliação pelo WhatsApp ↗</a><a class="btn btn-light" href="#servicos">Ver todos os serviços</a></div>
+        <div class="hero-trust"><span><b class="check">✓</b> Engº Civil • CREA 27125 / D MG</span><span><b class="check">✓</b> Garantia de 2 anos*</span><span><b class="check">✓</b> Atendimento regional</span></div>
+      </div></div>
+    </section>
+
+    <div class="quick"><div class="container quick-grid">
+      <div class="quick-card"><div class="icon">⌂</div><strong>Reformas em geral</strong><span>Do planejamento à execução.</span></div>
+      <div class="quick-card"><div class="icon">⌁</div><strong>Telhados</strong><span>Revisão, reparos e substituição.</span></div>
+      <div class="quick-card"><div class="icon">▣</div><strong>Laudos e perícias</strong><span>Documentação e avaliação técnica.</span></div>
+      <div class="quick-card"><div class="icon">✓</div><strong>Atendimento local</strong><span>Lago Norte, Lago Sul, Jardim Botânico e Plano Piloto.</span></div>
+    </div></div>
+
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-head"><div><div class="section-kicker">Soluções completas</div><h2>Serviços para cuidar do imóvel de ponta a ponta.</h2></div><p>Uma única empresa para diferentes necessidades de manutenção, reforma e engenharia — com foco especial em telhados.</p></div>
+        <div class="service-slider"><div class="slider-track" id="serviceTrack">
+          <article class="service-card"><div class="icon">⌂</div><h3>Construção & Reforma</h3><p>Reformas residenciais, manutenção e intervenções em ambientes internos e externos.</p><a class="service-link" href="https://wa.me/556183277032?text=Quero%20falar%20sobre%20constru%C3%A7%C3%A3o%20ou%20reforma." target="_blank">Solicitar atendimento →</a></article>
+          <article class="service-card"><div class="icon">◒</div><h3>Revisão de Telhado</h3><p>Inspeção, identificação de pontos críticos, reparos, substituição de telhas, cumeeiras e madeiramento.</p><a class="service-link" href="https://wa.me/556183277032?text=Quero%20solicitar%20uma%20revis%C3%A3o%20do%20meu%20telhado." target="_blank">Revisar meu telhado →</a></article>
+          <article class="service-card"><div class="icon">▤</div><h3>Laudo Técnico & Perícia</h3><p>Laudos técnicos, perícias, avaliações de imóveis e apoio técnico para tomada de decisão.</p><a class="service-link" href="https://wa.me/556183277032?text=Quero%20informa%C3%A7%C3%B5es%20sobre%20laudo%20ou%20per%C3%ADcia." target="_blank">Falar com o engenheiro →</a></article>
+          <article class="service-card"><div class="icon">≋</div><h3>Impermeabilização</h3><p>Manta asfáltica, manta aluminizada térmica, manta líquida e soluções para áreas com infiltração.</p><a class="service-link" href="https://wa.me/556183277032?text=Quero%20avaliar%20um%20problema%20de%20infiltra%C3%A7%C3%A3o." target="_blank">Avaliar infiltração →</a></article>
+          <article class="service-card"><div class="icon">◇</div><h3>Calhas, Rufos & Condutores</h3><p>Fornecimento, instalação, revisão e manutenção para melhorar o escoamento da água.</p><a class="service-link" href="https://wa.me/556183277032?text=Preciso%20de%20um%20servi%C3%A7o%20em%20calhas%2C%20rufos%20ou%20condutores." target="_blank">Solicitar orçamento →</a></article>
+          <article class="service-card"><div class="icon">✦</div><h3>Esquadrias de Madeira</h3><p>Revitalização de portas, janelas e alisares com aplicação de verniz e acabamento.</p><a class="service-link" href="https://wa.me/556183277032?text=Quero%20revitalizar%20minhas%20esquadrias%20de%20madeira." target="_blank">Quero saber mais →</a></article>
+        </div></div>
+        <div class="slider-controls" style="margin-top:24px"><button class="circle-btn" id="prevService" aria-label="Anterior">←</button><button class="circle-btn" id="nextService" aria-label="Próximo">→</button></div>
+      </div>
+    </section>
+
+    <section id="empresa">
+      <div class="container split">
+        <div class="image-card"><div class="image-badge"><strong>Amaral Engenharia</strong><span>Engenharia Civil • Perícias • Reformas</span></div></div>
+        <div><div class="section-kicker">Quem somos</div><h2>Engenharia prática para resolver problemas reais do seu imóvel.</h2><p style="color:var(--muted);margin-top:18px">A Amaral Engenharia atua em Brasília com serviços de engenharia civil, reformas em geral e manutenção predial, com atenção especial à revisão e recuperação de telhados.</p>
+          <ul class="bullet-list"><li><b class="check">✓</b><span><strong>Avaliação antes de executar:</strong> entendemos o problema para indicar o caminho mais adequado.</span></li><li><b class="check">✓</b><span><strong>Atendimento regional:</strong> foco em Lago Norte, Lago Sul, Jardim Botânico e Plano Piloto.</span></li><li><b class="check">✓</b><span><strong>Experiência técnica:</strong> serviços de engenharia, laudos, perícias, avaliações e reformas.</span></li><li><b class="check">✓</b><span><strong>Compromisso:</strong> satisfação, rapidez e preço justo — valores destacados pela empresa.</span></li></ul>
+          <a class="btn btn-primary" href="https://wa.me/556183277032?text=Ol%C3%A1%2C%20quero%20conhecer%20melhor%20a%20Amaral%20Engenharia." target="_blank">Conhecer a Amaral Engenharia →</a>
+          <div class="stats"><div class="stat"><strong>CREA</strong><span>27125 / D MG</span></div><div class="stat"><strong>2 anos</strong><span>garantia informada no material</span></div><div class="stat"><strong>DF</strong><span>Brasília e regiões selecionadas</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="roof" id="telhados">
+      <div class="container"><div class="section-head"><div><div class="section-kicker">Especialidade</div><h2>Seu telhado merece mais do que um reparo improvisado.</h2></div><p>Falhas em telhas, cumeeiras, madeira, calhas ou impermeabilização podem gerar infiltração e prejuízo. A proposta é avaliar e agir no ponto certo.</p></div>
+        <div class="roof-grid">
+          <article class="roof-card"><div class="icon">⌂</div><h3>Revisão completa</h3><p>Verificação de telhas, cumeeiras, ripamento, madeiramento, pontos de vazamento e demais componentes.</p></article>
+          <article class="roof-card"><div class="icon">◒</div><h3>Reparos & substituições</h3><p>Substituição de telhas, ajustes de cumeeiras, reparos e intervenções necessárias para recuperar o conjunto.</p></article>
+          <article class="roof-card"><div class="icon">≋</div><h3>Proteção contra água e calor</h3><p>Aplicação de soluções de impermeabilização e manta aluminizada térmica conforme a necessidade do imóvel.</p></article>
+        </div>
+        <div style="margin-top:28px"><a class="btn btn-primary" href="https://wa.me/556183277032?text=Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20do%20telhado%20em%20Bras%C3%ADlia." target="_blank">Quero avaliar meu telhado pelo WhatsApp ↗</a></div>
+      </div>
+    </section>
+
+    <section><div class="container"><div class="section-head"><div><div class="section-kicker">Como funciona</div><h2>Do primeiro contato à solução.</h2></div><p>Um processo simples para você entender o problema, receber orientação e avançar com segurança.</p></div><div class="process">
+      <div class="step"><span class="step-number">01 — CONTATO</span><h3>Você explica o que precisa</h3><p>Envie uma mensagem pelo WhatsApp e conte o que está acontecendo no imóvel.</p></div>
+      <div class="step"><span class="step-number">02 — AVALIAÇÃO</span><h3>Entendemos a necessidade</h3><p>O serviço é direcionado conforme o tipo de problema e a região de atendimento.</p></div>
+      <div class="step"><span class="step-number">03 — SOLUÇÃO</span><h3>Planejamos o serviço</h3><p>Definimos a intervenção necessária para reforma, manutenção ou serviço técnico.</p></div>
+      <div class="step"><span class="step-number">04 — EXECUÇÃO</span><h3>Obra com acompanhamento</h3><p>O trabalho é executado com foco em qualidade, organização e resultado.</p></div>
+    </div></div></section>
+
+    <section class="areas" id="regioes"><div class="container"><div class="section-head"><div><div class="section-kicker">Onde atendemos</div><h2>Atendimento em regiões selecionadas de Brasília.</h2></div><p>O atendimento informado pela empresa é concentrado nestas regiões.</p></div><div class="area-grid">
+      <div class="area"><div class="icon">⌖</div><strong>Lago Norte</strong><span>Brasília • DF</span></div><div class="area"><div class="icon">⌖</div><strong>Lago Sul</strong><span>Brasília • DF</span></div><div class="area"><div class="icon">⌖</div><strong>Jardim Botânico</strong><span>Brasília • DF</span></div><div class="area"><div class="icon">⌖</div><strong>Plano Piloto</strong><span>Brasília • DF</span></div>
+    </div><div style="text-align:center;margin-top:30px"><a class="btn btn-primary" href="https://wa.me/556183277032?text=Ol%C3%A1!%20Estou%20em%20uma%20das%20regi%C3%B5es%20atendidas%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank">Verificar atendimento na minha região →</a></div></div></section>
+
+    <section class="banner"><div class="container"><div class="banner-inner"><h2>Tem infiltração, telhado com problema ou uma reforma para sair do papel?</h2><p>Converse diretamente com a Amaral Engenharia e explique o que você precisa. O próximo passo começa com uma mensagem.</p><a class="btn" href="https://wa.me/556183277032?text=Ol%C3%A1%2C%20Valluce!%20Quero%20solicitar%20um%20or%C3%A7amento%20para%20meu%20im%C3%B3vel." target="_blank">Solicitar orçamento no WhatsApp ↗</a></div></div></section>
+
+    <section><div class="container"><div class="section-head"><div><div class="section-kicker">Por que escolher</div><h2>Um atendimento técnico, direto e regional.</h2></div><p>O material da empresa destaca três pilares: satisfação, rapidez e preço justo.</p></div><div class="testimonials">
+      <article class="review"><div class="stars">★★★★★</div><p>“Satisfação, rapidez e preço justo” são compromissos destacados pela Amaral Engenharia para seus serviços.</p><strong>Satisfação</strong><small>Um dos valores apresentados no material da empresa.</small></article>
+      <article class="review"><div class="stars">★★★★★</div><p>Atendimento focado nas regiões de Lago Norte, Lago Sul, Jardim Botânico e Plano Piloto, em Brasília.</p><strong>Rapidez</strong><small>Atendimento regional para facilitar o contato e a execução.</small></article>
+      <article class="review"><div class="stars">★★★★★</div><p>Serviços de engenharia e reformas com foco em encontrar uma solução adequada para cada necessidade do imóvel.</p><strong>Preço justo</strong><small>Outro compromisso destacado no material da empresa.</small></article>
+    </div><div class="review-note">*Esta seção usa os diferenciais apresentados nos panfletos enviados. Depoimentos individuais de clientes podem ser adicionados posteriormente.</div></div></section>
+
+    <section class="faq" id="duvidas"><div class="container"><div class="section-head"><div><div class="section-kicker">Perguntas frequentes</div><h2>Antes de chamar, tire suas principais dúvidas.</h2></div><p>Se não encontrar o que procura, fale diretamente pelo WhatsApp.</p></div><div class="faq-grid">
+      <details class="faq-item"><summary>Vocês trabalham principalmente com telhados?</summary><p>Sim. A revisão, manutenção e recuperação de telhados são uma das principais frentes informadas pelo responsável, além de reformas em geral e serviços de engenharia.</p></details>
+      <details class="faq-item"><summary>Quais regiões são atendidas?</summary><p>O atendimento informado é para Lago Norte, Lago Sul, Jardim Botânico e Plano Piloto, em Brasília/DF.</p></details>
+      <details class="faq-item"><summary>Fazem laudo técnico e perícia?</summary><p>Sim. Os materiais apresentam Laudo Técnico, Perícia, Avaliação e ART entre os serviços da empresa.</p></details>
+      <details class="faq-item"><summary>Também fazem impermeabilização?</summary><p>Sim. Entre os serviços divulgados estão manta aluminizada térmica, manta líquida e manta asfáltica para diferentes aplicações.</p></details>
+      <details class="faq-item"><summary>Fazem calhas, rufos e condutores?</summary><p>Sim. A empresa informa serviços envolvendo rufos, calhas, pingadeiras e condutores.</p></details>
+      <details class="faq-item"><summary>Como peço um orçamento?</summary><p>Clique em qualquer botão de WhatsApp desta página e envie uma mensagem explicando o que precisa. Você também pode anexar fotos do problema pelo WhatsApp.</p></details>
+    </div></div></section>
+
+    <section class="contact"><div class="container contact-grid"><div><div class="section-kicker">Fale com a engenharia</div><h2>Vamos entender o que o seu imóvel precisa.</h2><p style="color:var(--muted);margin:18px 0 25px;max-width:620px">Não espere um pequeno problema virar uma reforma maior. Envie uma mensagem e conte o que está acontecendo. Se for possível, mande fotos e localização da obra.</p><a class="btn btn-primary" href="https://wa.me/556183277032?text=Ol%C3%A1%2C%20Valluce!%20Quero%20conversar%20sobre%20um%20servi%C3%A7o%20de%20engenharia." target="_blank">Falar com Valluce no WhatsApp ↗</a></div><div class="contact-card"><h3>Amaral Engenharia</h3><p>Engenharia Civil • Perícia • Avaliação • Reformas</p><div class="contact-items"><a class="contact-item" href="https://wa.me/556183277032" target="_blank"><div class="icon">◉</div><div><strong>(61) 98327-7032</strong><span>WhatsApp / atendimento</span></div></a><div class="contact-item"><div class="icon">⌖</div><div><strong>Brasília — DF</strong><span>Lago Norte • Lago Sul • Jardim Botânico • Plano Piloto</span></div></div><div class="contact-item"><div class="icon">▤</div><div><strong>Valluce Amaral</strong><span>Engº Civil • CREA 27125 / D MG</span></div></div></div></div></div></section>
+  </main>
+
+  <footer><div class="container footer-grid"><div><div class="footer-brand">Amaral Engenharia</div><p>Engenharia Civil, reformas em geral, telhados, laudos, perícias e avaliações em Brasília/DF.</p></div><div><h4>Navegação</h4><ul><li><a href="#servicos">Serviços</a></li><li><a href="#telhados">Telhados</a></li><li><a href="#empresa">A empresa</a></li><li><a href="#regioes">Regiões</a></li></ul></div><div><h4>Contato</h4><ul><li><a href="https://wa.me/556183277032" target="_blank">(61) 98327-7032</a></li><li>Brasília — DF</li><li>CREA 27125 / D MG</li></ul></div></div><div class="container copyright"><span>© 2026 Amaral Engenharia. Todos os direitos reservados.</span><span>Site institucional • Brasília/DF</span></div></footer>
+
+  <a class="whatsapp" href="https://wa.me/556183277032?text=Ol%C3%A1%2C%20Valluce!%20Vim%20pelo%20site%20da%20Amaral%20Engenharia%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">◔</a>
+
+  <script>
+    const track=document.getElementById('serviceTrack');
+    const cards=[...track.children];
+    let index=0;
+    const visible=()=>window.innerWidth<=620?1:window.innerWidth<=900?2:3;
+    function move(dir){
+      const max=Math.max(0,cards.length-visible());
+      index=Math.max(0,Math.min(index+dir,max));
+      const gap=18;
+      const width=cards[0].getBoundingClientRect().width+gap;
+      track.style.transform=`translateX(-${index*width}px)`;
+    }
+    document.getElementById('prevService').onclick=()=>move(-1);
+    document.getElementById('nextService').onclick=()=>move(1);
+    let timer=setInterval(()=>{ const max=Math.max(0,cards.length-visible()); index=index>=max?0:index+1; const width=cards[0].getBoundingClientRect().width+18; track.style.transform=`translateX(-${index*width}px)`; },4200);
+    track.parentElement.addEventListener('mouseenter',()=>clearInterval(timer));
+    track.parentElement.addEventListener('mouseleave',()=>{timer=setInterval(()=>{ const max=Math.max(0,cards.length-visible()); index=index>=max?0:index+1; const width=cards[0].getBoundingClientRect().width+18; track.style.transform=`translateX(-${index*width}px)`; },4200)});
+    window.addEventListener('resize',()=>{index=0;track.style.transform='translateX(0)'});
+  </script>
+</body>
+</html>
